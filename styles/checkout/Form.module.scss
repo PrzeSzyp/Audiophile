@@ -1,0 +1,291 @@
+@use '../variables' as V;
+
+.container {
+    width: 65%;
+    height: max-content;
+    background-color: V.$white;
+    border-radius: 10px;
+    form {
+        width: 85%;
+        margin: 0 auto;
+    }
+}
+
+.h1 {
+    width: 85%;
+    margin: 4rem auto 2rem auto;
+    letter-spacing: 2px;
+}
+
+.billingFlexContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 2rem auto;
+    .inputBillingFlex {
+    width: 49%;
+    margin: 1rem 0;
+    }
+    label {
+        color: V.$black;
+        font-size: .75rem;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: .5rem;
+        font-weight: 700;
+        span {
+            display: none;
+            font-weight: 400;
+        }
+    }
+    h4 {
+        color: V.$orange;
+        letter-spacing: 1px;
+        font-size: .8rem;
+        width: 100%;
+    }
+    input {
+        width: 100%;
+        height: 55px;
+        border-radius: 5px;
+        border: 1px solid V.$slate;
+    }
+
+    input:hover {
+        border: 1px solid V.$orange;
+        cursor: pointer;
+        caret-color: V.$orange;
+    }
+    input::placeholder {
+        padding-left: 1rem
+    } 
+}
+
+
+.shippingFlexContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 2rem auto;
+    .inputShippingFlex {
+        width: 49%;
+        margin: 1rem 0;
+        }
+    .inputShippingAddressFlex {
+        width: 100%;
+        margin: 1rem 0;
+    }
+        label {
+            font-size: .75rem;
+            display: flex;
+            justify-content: space-between;
+            font-weight: 700;
+            margin-bottom: .5rem;
+            span {
+            display: none;
+            font-weight: 400;
+            }
+        }
+        h4 {
+            color: V.$orange;
+            letter-spacing: 1px;
+            font-size: .8rem;
+            width: 100%;
+        }
+        input {
+            width: 100%;
+            height: 55px;
+            border-radius: 5px;
+            border: 1px solid V.$slate;
+        }
+        input:hover {
+            border: 1px solid V.$orange;
+            cursor: pointer;
+            caret-color: V.$orange;
+        }
+        input::placeholder {
+            padding-left: 1rem
+        }
+}
+
+.paymentFlexContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 2rem auto;
+    height: auto;
+    h4 {
+        color: V.$orange;
+        letter-spacing: 1px;
+        font-size: .8rem;
+        width: 100%;
+        height: 25px;
+    }
+    h5 {
+        margin-top: .25rem;
+    }
+    input:hover {
+        border: 1px solid V.$orange;
+        cursor: pointer;
+        caret-color: V.$orange;
+    }
+}
+
+.paymentSelect {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    .methodContainer {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        height: 55px;
+        border-radius: 5px;
+        border: 1px solid V.$slate;
+        margin: .5rem auto;
+        font-size: .9rem;
+        font-weight: 600;
+    }
+    .methodContainer:hover {
+        border: 1px solid V.$orange;
+        cursor: pointer;
+        caret-color: V.$orange;
+    }
+    h4 {
+        border: 1px solid V.$orange;
+        color: V.$orange;
+        letter-spacing: 1px;
+        font-size: .8rem;
+    }
+    label {
+        margin-left: 1rem;
+    }
+    input {
+        margin-left: 1rem;
+    }
+    
+    input:hover {
+        border: 1px solid V.$orange;
+        cursor: pointer;
+        caret-color: V.$orange;
+    }  
+}
+
+
+.emoneyContainer {
+    margin: 2rem auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    .emoneyNumberContainer {
+    width: 49%;
+    input:hover {
+        border: 1px solid V.$orange;
+        cursor: pointer;
+        caret-color: V.$orange;
+    }
+    label {
+        color: V.$black;
+        font-size: .75rem;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: .5rem;
+        font-weight: 700;
+        span {
+            display: none;
+            font-weight: 400;
+        }
+    }
+    input {
+        width: 100%;
+        height: 55px;
+        border-radius: 5px;
+        border: 1px solid V.$slate;
+    }
+
+    input:hover {
+        border: 1px solid V.$orange;
+        cursor: pointer;
+        caret-color: V.$orange;
+    }
+    input::placeholder {
+        padding-left: 1rem
+    } 
+}  
+}
+
+.codContainer {
+    margin: 1rem auto;
+    display: flex;
+    justify-content: space-between;
+    .iconContainer {
+        display: flex;
+        .svg {
+            filter: brightness(0) saturate(100%) invert(64%) sepia(30%) saturate(1546%) hue-rotate(329deg) brightness(92%) contrast(83%);
+        }
+    }
+    p {
+        color: V.$slate;
+        font-size: .9rem;
+        font-weight: 100;
+        line-height: 1.75;
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 1350px) {
+    .container {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .codContainer {
+        flex-direction: column;
+        .iconContainer {
+            justify-content: center;
+        }
+        p {
+            width: 100%;
+            text-align: center
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .h1 {
+        font-size: 1.75rem;
+        margin: 2rem auto 0 auto;
+    }
+
+    .billingFlexContainer {
+        flex-direction: column;
+        .inputBillingFlex {
+            width: 100%;
+        }
+    }
+
+    .shippingFlexContainer {
+        .inputShippingFlex {
+            width: 100%;
+        }
+    }
+
+    .paymentSelect {
+        width: 100%;
+    }
+
+    .emoneyContainer {
+        flex-direction: column;
+        .emoneyNumberContainer {
+            width: 100%;
+            margin: 1rem auto 0  auto;
+        }
+    }
+
+    .container {
+        height: auto;
+    }
+}
+

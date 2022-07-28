@@ -1,0 +1,118 @@
+@use 'variables' as V;
+
+.header {
+    background-color: #181818;
+    height: auto;
+    z-index: 9;
+    width: 100%;
+    position: absolute;
+}
+
+.container {
+    border-bottom: 1px solid rgba(151, 151, 151, .25);
+    width: 78%;
+    height: 96px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    justify-content: space-between;
+    font-family: V.$manrope;
+    z-index: 9;
+    position: relative;
+}
+
+.leftFlexContainer {
+    width: auto;
+    height: auto;
+    .hamburger {
+        display: none;
+        cursor: pointer;
+    }
+}
+
+.rightFlexContainer {
+    .cartLogo:hover {
+        cursor: pointer;
+        filter: brightness(0) saturate(100%) invert(64%) sepia(30%) saturate(1546%) hue-rotate(329deg) brightness(92%) contrast(83%);
+    }
+}
+
+.nav {
+    color: V.$white;
+    width: 430px;
+    display: flex;
+    justify-content: space-between;
+    font-size: .9rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    a:hover {
+        cursor: pointer;
+        color: V.$orange;
+    }
+}
+
+.imageNavContainer {
+    background-color: white;
+    z-index: 20;
+    position: absolute;
+    height: 400px;
+    margin-top: 0rem;
+    display: flex;
+    align-items: center;
+    // border-bottom-left-radius: 10px;
+    // border-bottom-right-radius: 10px;
+    box-shadow: .5px .5px 5px .5px rgba(0, 0, 0, .05);
+    display: none;
+}
+
+@media only screen and (min-width: 1440px){
+    .container {
+        max-width: 1440px;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .container {
+        width: 90%;
+        height: 89px;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .container {
+        width: 90%;
+        height: 89px;
+    }
+
+    .imageNavContainer {
+        display: flex;
+        height: 325px;
+        width: 100%;
+    }
+
+    .leftFlexContainer {
+        display: flex;
+        width: 200px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        
+        .hamburger {
+            display: block;
+        }
+    }
+
+    .nav {
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+    .imageNavContainer {
+        width: 100%;
+        height: 800px;
+        
+    }
+}

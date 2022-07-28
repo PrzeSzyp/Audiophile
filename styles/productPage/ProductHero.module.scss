@@ -1,0 +1,166 @@
+@use '../variables' as V;
+
+
+.itemContainer {
+    font-family: V.$manrope;
+    width: 78%;
+    height: auto;
+    margin: 5rem auto;
+    display: flex;
+    flex-direction: row;
+    .imgContainer {
+        width: 48%;
+        img {
+            border-radius: 10px;
+        }
+    }
+    .imgContainerTablet {
+        display: none;
+    }
+    .imgContainerMobile {
+        display: none;
+    }
+
+    .infoContainer {
+        height: auto;
+        width: 52%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+    }
+
+    .textContainer {
+        width: 80%;
+        height: auto;
+        span {
+            color: V.$orange;
+            letter-spacing: 8px;
+        }
+        h2 {
+            margin-top: 1rem;
+            color: V.$black;
+            font-size: 2.5rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        h3 {
+            margin-top: -1.25rem;
+            margin-bottom: 3rem;
+            letter-spacing: 2px;
+            span {
+                color: V.$black;
+            }
+        }
+
+        p {
+            color: V.$gray;
+            line-height: 1.5;
+            font-size: .975rem;
+            margin-bottom: 3.25rem;
+            font-weight: 200;
+        }
+        a {
+            
+            color: V.$white;
+            position: relative;
+            z-index: 3;
+            background-color: V.$orange;
+            padding: 1rem 1.5rem;
+            width: 160px;
+            height: 48px;
+            font-size: .9rem;
+            letter-spacing: 1px;
+        }
+        a:hover {
+            cursor: pointer;
+            background-color: V.$lightOrange;
+        }
+
+        
+        .addToCartContainer {
+            height: 50px;
+            width: 300px;
+            display: flex;
+            justify-content: space-between;
+            .quantityBox {
+                background-color: V.$silver;
+                width: 120px;
+                height: auto;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                .plus {
+                    color: #979797;
+                }
+                .plus:hover {
+                    color: V.$orange;
+                    cursor: pointer;
+                }
+                .minus {
+                    color: #979797;
+                }
+                .minus:hover {
+                    color: V.$orange;
+                    cursor: pointer;
+                }
+            }
+            
+        }
+    }
+    
+}
+
+@media only screen and (max-width: 900px) {
+    .itemContainer {
+        width: 90%;
+        justify-content: space-between;
+        margin: 2rem auto;
+        .textContainer {
+            width: 100%;
+            h2 {
+                font-size: 1.75rem;
+            }
+        }
+
+        .imgContainer {
+            display: none;
+        }
+        .imgContainerTablet {
+            display: block;
+            img {
+                width: 280px;
+            }
+        }
+
+    }
+    
+}
+
+@media only screen and (max-width: 725px) {
+    .itemContainer {
+        flex-direction: column;
+        .imgContainerTablet {
+            display: none;
+        }
+
+        .imgContainerMobile {
+            display: flex;
+            justify-content: center;
+            img {
+                width: 327px;
+            }
+        }
+        .infoContainer {
+            width: 100%;
+            margin: 3rem auto 0 auto;
+        }
+        .textContainer {
+            width: 100%;
+        }
+     
+    }
+
+    
+}

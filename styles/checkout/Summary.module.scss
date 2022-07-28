@@ -1,0 +1,137 @@
+@use '../variables' as V;
+
+.container {
+    border-radius: 10px;
+    width: 350px;
+    height: fit-content;
+    background-color: V.$white;
+    padding-bottom: 2rem;
+}
+
+.topContainer {
+    width: 80%;
+    margin: 2rem auto;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+.itemContainer {
+    width: 80%;
+    height: auto;
+    margin: 1.5rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.leftContainer {
+    width: 200px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    .textContainer {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        height: auto;
+        justify-content: center;
+        align-items: flex-start;
+        h4 {
+            margin: 0rem auto;
+            width: 100%;
+            margin-left: 1rem
+        }
+        .name {
+            color: V.$black;
+            font-weight: 600;
+            letter-spacing: 1px;
+            font-size: .9rem;
+        }
+        .price {
+            color: V.$slate;
+            font-weight: 500;
+            font-size: .8rem;
+        }
+    }
+}
+
+.imgContainer {
+    width: 64px;
+    height: auto;
+    .img {
+        border-radius: 5px;
+    }
+}
+
+.rightContainer {
+    width: 10%;
+    .quantityBox {
+        color: V.$slate;
+        font-weight: 600;
+        width: auto;
+        height: 32px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: .9rem;
+    }
+}
+
+.bottomContainer {
+    width: 80%;
+    height: auto;
+    margin: 3rem auto 2rem auto;
+    h3 {
+        color: V.$slate;
+        display: flex;
+        justify-content: space-between;
+        font-weight: 400;
+        font-size: 1rem;
+        span {
+            color: V.$black;
+            font-weight: 600;
+            font-size: 1.15rem;
+            
+        }
+        .grandTotal {
+            color: V.$orange;
+        }
+    }
+}
+
+.buttonBox {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    button {
+        color: V.$white;
+        background-color: V.$orange;
+        border: none;
+        padding: 1rem 1.5rem;
+        width: 100%;
+        height: 48px;
+        font-size: .9rem;
+        letter-spacing: 1px;
+    }
+    button:hover {
+        cursor: pointer;
+        background-color: V.$lightOrange;
+    }
+}
+
+@media only screen and (max-width: 1350px) {
+    .container {
+        width: 100%;
+        margin: 3rem auto 0 auto;
+        padding-bottom: 4rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .container {
+        padding-bottom: 3rem;
+    }
+}
+

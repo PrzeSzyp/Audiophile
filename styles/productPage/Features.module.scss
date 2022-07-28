@@ -1,0 +1,130 @@
+@use '../variables' as V;
+
+.container {
+    font-family: V.$manrope;
+    width: 78%;
+    height: auto;
+    margin: 10rem auto 5rem auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.featureContainer {
+    width: 60%;
+    h2 {
+        font-size: 2rem;
+        margin-top: 0;
+        letter-spacing: 2px;
+    }
+    p {
+        color: V.$slate;
+        line-height: 1.75;
+        font-size: .975rem;
+        margin-bottom: 3.25rem;
+        font-weight: 200;
+    }
+}
+
+.contentsContainer {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    .textBox {
+        width: 350px;
+        height: auto;
+    }
+    ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        margin-top: 3rem;
+        .li {
+            width: 100%;
+            margin: .5rem auto;
+            margin-left: -2.5rem;
+            color: V.$slate;
+        }
+        .count {
+        color: V.$orange;
+        margin-right: 1.5rem;
+        }
+
+    }
+    h2 {
+        margin: 0 auto;
+        font-size: 2rem;
+        margin-top: 0;
+        letter-spacing: 2px;
+    }
+    
+}
+
+@media only screen and (max-width: 1250px) {
+    .contentsContainer {
+        width: 35%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .container {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .featureContainer {
+        width: 100%;
+    }
+
+    .contentsContainer {
+        width: 100%;
+        .textBox {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        h2 {
+            height: auto;
+            width: 50%;
+            
+        }
+        ul {
+            margin-top: 0;
+            width: 50%;
+        }
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .container {
+        margin: 5rem auto;
+    }
+
+    .featureContainer {
+        h2 {
+            font-size:  1.5rem;
+        }
+    }
+
+    .contentsContainer {
+        .textBox {
+            flex-direction: column;
+            
+        }
+        h2 {
+            font-size:  1.5rem;
+            width: 100%;
+            margin: 3rem auto;
+        }
+        ul {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,115 @@
+@use 'variables' as V;
+
+.itemContainer, .evenItemContainer {
+    width: 78%;
+    height: auto;
+    margin: 10rem auto;
+    display: flex;
+    flex-direction: row;
+    .imgContainer {
+        width: 48%;
+        img {
+            border-radius: 10px;
+        }
+    }
+    .imgContainerTablet {
+        display: none;
+    }
+    .imgContainerMobile {
+        display: none;
+    }
+
+    .infoContainer {
+        height: auto;
+        width: 52%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+    }
+
+    .textContainer {
+        width: 80%;
+        height: auto;
+        span {
+            color: V.$orange;
+            letter-spacing: 8px;
+        }
+        h2 {
+            margin-top: 1rem;
+            color: V.$black;
+            font-size: 2.5rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        p {
+            color: V.$gray;
+            line-height: 1.5;
+            font-size: .975rem;
+            margin-bottom: 3.25rem;
+            font-weight: 200;
+        }
+        a {
+            
+            color: V.$white;
+            position: relative;
+            z-index: 3;
+            background-color: V.$orange;
+            padding: 1rem 1.5rem;
+            width: 160px;
+            height: 48px;
+            font-size: .9rem;
+            letter-spacing: 1px;
+        }
+        a:hover {
+            cursor: pointer;
+            background-color: V.$lightOrange;
+        }
+    }
+    
+}
+
+.evenItemContainer {
+    flex-direction: row-reverse;
+}
+
+@media only screen and (max-width: 900px) {
+    .itemContainer, .evenItemContainer {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .itemContainer, .evenItemContainer {
+        margin: 7.5rem auto 0 auto;
+        flex-direction: column;
+        .imgContainer {
+            display: none;
+        }
+        .imgContainerTablet {
+            display: flex;
+            img {
+                border-radius: 10px;
+            }
+        }
+        .infoContainer {
+            width: 90%;
+            margin: 3rem auto;
+        }
+        .textContainer {
+            width: 100%;
+            text-align: center;
+        }
+        #evenItemContainer {
+            flex-direction: column;
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .itemContainer, .evenItemContainer {
+        margin: 5rem auto;
+    }
+}
+

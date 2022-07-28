@@ -1,0 +1,157 @@
+@use 'variables' as V;
+
+.footer {
+    width: 100%;
+    height: 365px;
+    background-color: V.$darkGrey;
+}
+
+.container {
+    width: 77%; 
+    height: auto;
+    margin: 0 auto;
+}
+
+.topLine {
+    width: 101px;
+    height: 4px;
+    background-color: V.$orange;
+}
+
+.logoNavFlexContainer {
+    width: 100%;
+    margin: 4.3rem auto 1rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .nav {
+        color: V.$white;
+        width: 430px;
+        display: flex;
+        justify-content: space-between;
+        font-weight: 500;
+        font-size: .9rem;
+        letter-spacing: 1px;
+        a:hover {
+            cursor: pointer;
+            color: V.$orange;
+        }
+    }
+}
+
+.description {
+    padding-top: .5rem;
+    width: 50%;
+    line-height: 1.5;
+    color: #878787;
+    font-weight: 300;
+    font-size: .9rem;
+}
+
+.iconContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 110px;
+    float: right;
+    margin-top: -1rem;
+    .svg:hover {
+        cursor: pointer;
+        filter: brightness(0) saturate(100%) invert(64%) sepia(30%) saturate(1546%) hue-rotate(329deg) brightness(92%) contrast(83%);
+    }
+}
+
+.copyright {
+    margin-top: 4.5rem;
+    color: #878787;
+    font-weight: 500;
+}
+
+@media only screen and (min-width: 1440px){
+    .container {
+        max-width: 1440px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .footer {
+        height: auto;
+        padding-bottom: 2rem;
+    }
+    .container {
+        width: 90%;
+        height: auto;
+    }
+
+    .logoNavFlexContainer {
+        flex-direction: column;
+        align-items: flex-start;
+        height: 90px;
+    }
+
+    .description {
+        width: 100%;
+    }
+
+    .iconContainer {
+        margin-top: 2rem;
+    }
+
+    .copyright {
+        margin-top: 2rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .footer {
+        padding-bottom: 5rem;
+    }
+    .topLineContainer {
+        display: flex;
+        justify-content: center;
+    }
+    .topLine {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logoNavFlexContainer {
+       justify-content: center;
+       align-items: center;
+       height: auto;
+       margin: 3.5rem auto 1rem auto;
+        .nav {
+            padding: 2rem 0;
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: 200px;
+            align-items: center;
+        }
+    }
+
+    .description {
+        text-align: center;
+    }
+
+    .copyright {
+        font-size: .9rem;
+        text-align: center;
+        margin-top: -5rem;
+        margin-bottom: 2rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .iconFlexContainer {
+        display: flex;
+        justify-content: center;
+    }
+
+    .iconContainer {
+        float: none;
+        margin-top: 5rem;
+        height: auto;   
+    }
+    
+}
+
